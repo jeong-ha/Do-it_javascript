@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .red{color: red;}
+        .blue{color: blue;}
+    </style>
     <script>
         var i = 1;
         while( i<=10){
@@ -14,7 +18,25 @@
         document.write("===THE END===","<br><br><br>");
     </script>
     <script>
+        var o = 1;
+        while( o <= 30){
+            if(o%2 == 0 && o%6 == 0 ){
+                document.write(o,"<br />");
+            }
+            o++;
+        }
         
+    </script>
+    <script>
+        var u = 20;
+        while( u>=10){
+            if(u%2 == 0){
+                document.write("<p class='blue'>" + u + "</p>");
+            } else{
+                document.write("<p class='red'>" + u + "</p>");
+            }
+            u--;
+        }
     </script>
 </head>
 <body>
