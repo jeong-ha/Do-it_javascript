@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>객체 method - splice, pop, push, shift, unshift 사용</title>
+<script>
+	var greenArr = ["교대", "방배", "강남"];
+	var yellowArr = ["미금", "정자", "수서"];
+
+	greenArr.splice(2,1,"서초", "역삼"); //배열 객체의 지정 데이터를 삭제하고, 그 구간에 새 데이터 삽입
+	console.log(greenArr);
+
+	var data1 = yellowArr.pop(); //수서 를 data1에 저장 //마지막 인덱스에 저장된 데이터 삭제하는 method
+	var data2 = yellowArr.shift(); //미금 을 data2에 저장 //첫번째 인덱스에 저장된 데이터 삭제하는 method
+
+	yellowArr.push(data2); //미금을 마지막 인덱스에 밀어넣기 //배열 객체의 마지막 인덱스에 새 데이터를 삽입
+	console.log(yellowArr);
+
+	yellowArr.unshift(data1); //수서를 첫번째 인덱스에 밀어넣기 //배열 객체의 첫번째 인덱스에 새 데이터 삽입
+	console.log(yellowArr);
+</script>
+</head>
+<body>
+내용
+</body>
+</html>
