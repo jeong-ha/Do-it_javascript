@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>전역변수와 지역변수의 개념과 차이</title>
+    <script>
+        function myFnc() {
+            alert("전역 함수");
+        }
+
+        function outerFnc(){
+            function myFnc(){
+                alert("지역 함수");
+            }
+            myFnc(); //지역함수
+        }
+
+        outerFnc();//지역함수
+        myFnc(); //전역함수
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
