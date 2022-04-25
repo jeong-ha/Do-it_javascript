@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>제이쿼리 배열 관련 메서드(each)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            //each
+            var obj = [{
+                "area" : "서울"
+            }, {
+                "area" : "부산"
+            }, {
+                "area" : "전주"
+            }]
+
+            $(obj).each(function(i,o){
+                console.log(i + ":", o);
+            });
+            console.log("====THE END====");
+
+            $.each($("#each2 li"), function(i,o){
+                console.log(i+":", o);
+            });
+            console.log("====THE END2====");
+
+            $.each($("#each2 li"),function(i){
+                console.log(i + ":", $(this));
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>each(), $.each() 메서드</h1>
+        <ul id="each1">
+            <li>내용1-1</li>
+            <li>내용1-2</li>
+            <li>내용1-3</li>
+        </ul>
+        <ul id="each2">
+            <li>내용2-1</li>
+            <li>내용2-2</li>
+            <li>내용2-3</li>
+        </ul>
+</body>
+</html>

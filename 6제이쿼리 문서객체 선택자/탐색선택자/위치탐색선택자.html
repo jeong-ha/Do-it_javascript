@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>위치 탐색 선택자</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //first/last 선택자
+            $("#fl li:first").css({"background-color":"#ff0"});
+            $("#fl li:last").css({"background":"#0ff"});
+            //even/odd 선택자
+            $("#eo li:even").css({"background":"#ff0"}); //홀수 (인덱스는짝수 0 2)
+            $("#eo li:odd").css({"background":"#f0f"}); //짝수 (인덱스는홀수 1 3)
+            // eq/lt/gt 선택자
+            $("#elg li").eq(2).css({"background":"#faa"}); //인덱스 숫자만 선택
+            $("#elg li:lt(2)").css({"background":"#0ff"}); //인덱스 숫자보다 작은 요소만 선택
+            $("#elg li:gt(2)").css({"background":"orange"}); //인덱스 숫자보다 큰 요소만 선택
+            //only-child/slice 선택자
+            $("li:only-chlid").css({"color":"green"}); //선택한 요소가 부모요소에게 하나뿐인 자식요소인 경우
+            $("#slice li").slice(1,3).css({"background":"green"});//1이상3미만(1,2)
+        });
+    </script>
+</head>
+<body>
+    <h1>first/last 선택자</h1>
+        <ul id="fl">
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+            <li>내용4</li>
+        </ul>
+    <br>
+    <h1>even/odd 선택자</h1>
+        <ul id="eo">
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+            <li>내용4</li>
+        </ul>
+    <br>
+    <h1>eq/lt/gt 선택자</h1>
+        <ul id="elg">
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+            <li>내용4</li>
+            <li>내용5</li>
+        </ul>
+    <br>
+    <h1>only-child/slice 선택자</h1>
+        <ul id="only">
+            <li>내용 only</li>
+        </ul>
+        <ul id="slice">
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+            <li>내용4</li>
+        </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
